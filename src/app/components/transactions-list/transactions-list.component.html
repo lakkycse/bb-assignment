@@ -1,0 +1,9 @@
+<!-- <app-transaction-item> -->
+<div *ngFor="let transaction of transactions.data">
+    <span data-test-hook="transactionColour">{{transaction.categoryCode}}</span>
+    <span data-test-hook="transactionDate">{{transaction.valueDate}}</span>
+    <span data-test-hook="transactionMerchantName">{{transaction.merchant.name}}</span>
+    <span data-test-hook="transactionType">{{transaction.transaction.type}}</span>
+    <span data-test-hook="transactionAmount">{{transaction.transaction.amountCurrency.amount}}</span>
+</div>
+<!-- </app-transaction-item> -->
