@@ -1,35 +1,37 @@
-
 .main-view{
     display:flex;
     position:relative;
-    
     img{
-        // position:relative;
         width:100vw;
-        height:calc(100vh - 100px);
+        height:calc(100vh - 105px);
         filter: blur(2px);
-
     }
-    app-transfer-form{
-        top:100px;
-
-        left:300px;
+    .sub-view{
         position:absolute;
+        display: flex;
+        justify-content: center;
+        width:100vw;
+        top: 100px;
+        app-transfer-form{
+            top:100px;           
+        }
+        app-transactions-list{
+            top:100px;
+        }
     }
-    app-transactions-list{
-        top:100px;
-        left:800px;
-        position:absolute;
-    }
-    app-footer{
-        margin:10px 0px;
-    }
-
 }
+
 .top-view{
+    border-bottom: 1px solid #c1c1c1;
     .assignment{
         float:right;
         margin-top:20px;
         margin-right:20px;
+        color:#00a1e0;
     }
+}
+
+app-footer{
+    margin:10px 0px;
+    border-top: 1px solid #c1c1c1;
 }

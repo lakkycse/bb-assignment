@@ -105,7 +105,7 @@ export class TransferFormComponent implements OnInit {
     validateNumber(e: any) {
         let input = String.fromCharCode(e.charCode);
         // const reg = /^[0-9]+(\.[0-9][0-9]?)?$/
-        const reg = /^[0-9]+.?$/
+        const reg = /^\d+(\.\d+)?$/
 
 
         if (!reg.test(input)) {

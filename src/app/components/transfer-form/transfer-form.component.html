@@ -22,7 +22,7 @@
                 <div class="input-group">
                     <span class="currency-addon">€</span>
                     <!-- <span class="currencyinput"> -->
-                    <input type="number" formControlName="amount" class="form-control" placeholder="specify the amount" (keypress)="validateNumber($event)"
+                    <input type="number" formControlName="amount" class="form-control" placeholder="specify the amount"
                         [ngClass]="{ 'is-invalid': submitted && f.amount.errors }" />
                     <!-- </span> -->
                     <div *ngIf="submitted && f.amount.errors" class="invalid-feedback">

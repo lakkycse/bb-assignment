@@ -12,9 +12,11 @@
 
 }
 .merchant{
-    text-align:center;
-    margin-right: 50px;
-    width:200px;
+    text-align:left;
+    // margin-right: 50px;
+    width:350px;
+    font-size: 12px;
+    margin-bottom: 0px;
 }
 
 .cat-code{
@@ -26,17 +28,12 @@
 }
 .date{
     text-align:left;
-    width:60px;
+    width:100px;
 }
-.merchant{
-    font-size: 12px;
-    margin-bottom: 0px;
-    width:200px;
-}
+
 .amount{
     text-align: right;
     float:right;
-    color:#ff0000;
 }
 .card-body{
     width:600px;
