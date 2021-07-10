@@ -9,6 +9,7 @@ export class FilterComponent {
   @Output() inputChange: EventEmitter<any> = new EventEmitter();
 
   onInputChange(event: Event): void {
-    this.inputChange.emit(event);
+    this.inputChange.emit((event.target as HTMLInputElement).value);
+    console.log((event.target as HTMLInputElement).value)
   }
 }

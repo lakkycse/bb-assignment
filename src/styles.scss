@@ -7,3 +7,13 @@ $large-spacing: 20px;
 
 // colors
 $primary-blue: #00a1e0;
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+
+
+.js-trigger-form,.js-trigger-form:hover,.js-trigger-form:focus{
+    background:#de6f0f !important;
+    float:right;
+    border-color:#de6f0f !important;
+    box-shadow:none;
+}

@@ -1,9 +1,25 @@
-<!-- <app-transaction-item> -->
-<div *ngFor="let transaction of transactions.data">
-    <span data-test-hook="transactionColour">{{transaction.categoryCode}}</span>
-    <span data-test-hook="transactionDate">{{transaction.valueDate}}</span>
-    <span data-test-hook="transactionMerchantName">{{transaction.merchant.name}}</span>
-    <span data-test-hook="transactionType">{{transaction.transaction.type}}</span>
-    <span data-test-hook="transactionAmount">{{transaction.transaction.amountCurrency.amount}}</span>
+<div class="card">
+    <h4 class="card-header"><i class="lni lni-list"></i> Transactions <b>List</b></h4>
+    <div class="card-body">
+        <app-filter (inputChange)="search($event)"></app-filter>
+        <!-- <div *ngIf="transactions | async as result "> -->
+        <div *ngFor="let transaction of transactions|searchFilter: searchTerm; index as i">
+            <!-- <app-transaction-item> -->
+            <div class="item">
+                <span class="cat-code" [ngStyle]="{'background-color':transaction.categoryCode}"
+                    data-test-hook="transactionColour"></span>
+                <span class="date" data-test-hook="transactionDate">{{transaction.dates.valueDate | date: "MMM.dd"}}</span>
+                <div class="vertical">
+
+                    <span class="merchant" data-test-hook="transactionMerchantName">{{transaction.merchant.name}}</span>
+                    <span class="merchant" data-test-hook="transactionType">{{transaction.transaction.type}}</span>
+                </div>
+                <span [ngStyle]="{'color':transaction.transaction.creditDebitIndicator=='CRDT'?'green':'red'}"
+                    class="amount" data-test-hook="transactionAmount">€
+                    {{transaction.transaction.creditDebitIndicator=='CRDT'?'+':'-'}}{{transaction.transaction.amountCurrency.amount}}</span>
+                <!-- </div> -->
+                <!-- </app-transaction-item> -->
+            </div>
+        </div>
+    </div>
 </div>
-<!-- </app-transaction-item> -->

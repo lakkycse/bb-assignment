@@ -9,6 +9,10 @@ import { TransactionItemComponent } from './components/transaction-item/transact
 import { SubmitButtonComponent } from './components/submit-button/submit-button.component';
 import { LogoComponent } from './components/logo/logo.component';
 import { TransactionsListComponent } from './components/transactions-list/transactions-list.component';
+import { TransferFormComponent } from './components/transfer-form/transfer-form.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SearchFilterPipe } from './search-filter.pipe';
 
 @NgModule({
   declarations: [
@@ -18,12 +22,17 @@ import { TransactionsListComponent } from './components/transactions-list/transa
     TransactionItemComponent,
     SubmitButtonComponent,
     LogoComponent,
-    TransactionsListComponent
+    TransactionsListComponent,
+    TransferFormComponent,
+    SearchFilterPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

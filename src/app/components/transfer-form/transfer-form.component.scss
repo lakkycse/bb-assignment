@@ -1,0 +1,32 @@
+.card{
+width:400px;
+// height:400px
+}
+.card-header{
+    background:#03a9f4;
+    color:#fff;
+}
+.submit{
+    margin-top: 30px;
+    float:right;
+    background:#ff0000;
+    color:#ffffff;
+}
+.currency-addon{
+    width: 40px;
+    background: #f1f1f1;
+    text-align: center;
+    height: inherit;
+    padding-top: 5px;
+    border-radius: 4px 0px 0px 4px;
+}
+.form-group{
+    border-radius: 4px;
+}
+.send{
+    background:#de6f0f
+}
+.js-trigger-form,.submitform{
+    background:#de6f0f !important;
+    float:right
+}
