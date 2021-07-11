@@ -41,7 +41,7 @@
 }
 .card-body{
     width:600px;
-    max-height: calc(100vh - 280px);
+    max-height: calc(100vh - 230px);
     overflow: hidden;
 }
 .vertical{
@@ -54,4 +54,6 @@
 .card-header{
     background: #03a9f4;
     color: #fff;
+    height:60px;
+    padding: 15px;
 }

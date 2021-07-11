@@ -24,11 +24,9 @@ export class TransferFormComponent implements OnInit {
             fromAccount: ['My Personal Account: € 5970'],
             toAccount: ['', Validators.required],
             amount: ['', Validators.compose([
-                Validators.required, Validators.min(1), Validators.max(500)])]
+                Validators.required, Validators.min(1), Validators.max(5970)])]
         });
     }
-
-    get f() { return this.form.controls; }
 
     submit(content: any, form: any) {
         this.submitted = true
@@ -56,7 +54,7 @@ export class TransferFormComponent implements OnInit {
         });
     }
 
-    private getDismissReason(reason: any): string {
+    getDismissReason(reason: any): string {
         if (reason === ModalDismissReasons.ESC) {
             return 'by pressing ESC';
         } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {

@@ -38,10 +38,10 @@ describe('TransactionsListComponent', () => {
       },
       "transaction": {
         "amountCurrency": {
-          "amount": 5000,
+          "amount": 400,
           "currencyCode": "EUR"
         },
-        "type": "Salaries",
+        "type": "Online Transfer",
         "creditDebitIndicator": "CRDT"
       },
       "merchant": {
