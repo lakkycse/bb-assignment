@@ -11,6 +11,9 @@
     border-bottom: 1px solid #d1d1d1;
 
 }
+.merchant-details{
+    width:54%
+}
 .merchant{
     text-align:left;
     // margin-right: 50px;
@@ -20,7 +23,7 @@
 }
 
 .cat-code{
-    width:5px;
+    width:1%;
     height: 60px;
     margin-top: -10px;
     margin-right: 20px;
@@ -28,12 +31,13 @@
 }
 .date{
     text-align:left;
-    width:100px;
+    width:20%;
 }
 
 .amount{
     text-align: right;
     float:right;
+    width:25%
 }
 .card-body{
     width:600px;

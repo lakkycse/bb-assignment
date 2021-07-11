@@ -9,7 +9,7 @@ export class SharedService {
 
   constructor() { }
 
-    setData(message: string) {
+    setData(message: any) {
         // just an example:
         this.subject.next({ text: message });
     }

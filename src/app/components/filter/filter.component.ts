@@ -10,6 +10,5 @@ export class FilterComponent {
 
   onInputChange(event: Event): void {
     this.inputChange.emit((event.target as HTMLInputElement).value);
-    console.log((event.target as HTMLInputElement).value)
   }
 }

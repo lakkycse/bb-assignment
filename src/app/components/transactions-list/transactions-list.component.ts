@@ -18,13 +18,10 @@ export class TransactionsListComponent implements OnInit {
 
   ngOnInit(): void {
     this.httpClient.get("assets/mock-data/transactions.json").subscribe(data => {
-      console.log(data);
-
       this.transactions = data;
       this.transactions = this.transactions.data.sort((a: any, b: any) => {
         return (b.dates.valueDate - a.dates.valueDate);
       });
-      console.log(this.transactions1)
       this.transactions1 = this.transactions
     })
     this.sharedService.getData().subscribe((data: any) => {
@@ -66,8 +63,6 @@ export class TransactionsListComponent implements OnInit {
   
   search(value: string): void {
     this.searchTerm = value
-    console.log(value)
-    console.log(this.transactions)
     this.transactions = this.transactions1.filter((val: any) => val.merchant.name.toLowerCase().includes(value));
   }
 
